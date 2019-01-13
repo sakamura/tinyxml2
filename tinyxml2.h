@@ -276,14 +276,14 @@ private:
         TIXMLASSERT( cap > 0 );
         if ( cap > _allocated ) {
             TIXMLASSERT( cap <= INT_MAX / 2 );
-            std::size_t newAllocated = cap * 2;
+            std::size_t newAllocated = (size_t)cap * 2;
             T* newMem = new T[newAllocated];
-            memcpy( newMem, _mem, sizeof(T)*_size );	// warning: not using constructors, only works for PODs
+            memcpy( newMem, _mem, sizeof(T)*(size_t)_size );	// warning: not using constructors, only works for PODs
             if ( _mem != _pool ) {
                 delete [] _mem;
             }
             _mem = newMem;
-            _allocated = newAllocated;
+            _allocated = (int)newAllocated;
         }
     }
 
