@@ -276,7 +276,7 @@ private:
         TIXMLASSERT( cap > 0 );
         if ( cap > _allocated ) {
             TIXMLASSERT( cap <= INT_MAX / 2 );
-            int newAllocated = cap * 2;
+            std::size_t newAllocated = cap * 2;
             T* newMem = new T[newAllocated];
             memcpy( newMem, _mem, sizeof(T)*_size );	// warning: not using constructors, only works for PODs
             if ( _mem != _pool ) {
@@ -555,7 +555,7 @@ public:
                || ch == '-';
     }
 
-    inline static bool StringEqual( const char* p, const char* q, int nChar=INT_MAX )  {
+    inline static bool StringEqual( const char* p, const char* q, std::size_t nChar=INT_MAX )  {
         if ( p == q ) {
             return true;
         }
