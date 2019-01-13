@@ -8,21 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96F704241D69D3DC0081408C /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F704221D69D3DC0081408C /* tinyxml2.cpp */; };
-		96F704251D69D40C0081408C /* tinyxml2.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 96F704231D69D3DC0081408C /* tinyxml2.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		96F704141D69D3AA0081408C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				96F704251D69D40C0081408C /* tinyxml2.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		96F704161D69D3AA0081408C /* libtinyxml2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtinyxml2.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +61,6 @@
 			buildPhases = (
 				96F704121D69D3AA0081408C /* Sources */,
 				96F704131D69D3AA0081408C /* Frameworks */,
-				96F704141D69D3AA0081408C /* CopyFiles */,
 			);
 			buildRules = (
 			);
